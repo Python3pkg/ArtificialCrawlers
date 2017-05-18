@@ -61,7 +61,7 @@ class ACEnvironmentTest(unittest.TestCase):
 
         x, y = np.where(map)
         self.assertEqual(len(refs), 9, "Size of list of references don't match!")
-        pop_idx = list(range(len(refs)))
+        pop_idx = range(len(refs))
 
         for k, i, j in zip(pop_idx, x, y):
             self.assertTrue(env.population[i, j] is refs[k],
